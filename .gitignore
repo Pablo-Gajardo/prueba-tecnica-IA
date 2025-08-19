@@ -1,0 +1,26 @@
+# -----------------
+# Backend (NestJS) - microservicio-copiloto-pdf
+# -----------------
+/microservicio-copiloto-pdf/node_modules
+/microservicio-copiloto-pdf/dist
+/microservicio-copiloto-pdf/.env
+/microservicio-copiloto-pdf/.cache
+/microservicio-copiloto-pdf/logs
+/microservicio-copiloto-pdf/npm-debug.log*
+/microservicio-copiloto-pdf/yarn-error.log*
+
+# -----------------
+# Frontend (Vue/React) - front-copiloto-pdf
+# -----------------
+/front-copiloto-pdf/node_modules
+/front-copiloto-pdf/dist
+/front-copiloto-pdf/.env
+/front-copiloto-pdf/.cache
+/front-copiloto-pdf/logs
+/front-copiloto-pdf/npm-debug.log*
+/front-copiloto-pdf/yarn-error.log*
+
+# -----------------
+# Archivos generales
+# -----------------
+.DS_Store
