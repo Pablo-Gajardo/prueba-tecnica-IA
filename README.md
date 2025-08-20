@@ -95,6 +95,10 @@ Permite subir PDFs y mantener la conversación con el asistente.
 - Generación de respuesta:
     - GPT-3.5-turbo produce la respuesta final basándose en la información recuperada y el contexto de la conversación.
 
+## Diagrama de flujo conversacional
+
+![Diagrama de flujo de datos](<img/Diagrama de flujo de datos.png> width="600")
+
 ## 🚀 Funcionalidades
 Funcionalidades implementadas
 
