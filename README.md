@@ -97,7 +97,7 @@ Permite subir PDFs y mantener la conversación con el asistente.
 
 ## Diagrama de flujo conversacional
 
-![Diagrama de flujo de datos](<img/Diagrama de flujo de datos.png> width="600")
+![Diagrama de flujo de datos](<img/Diagrama de flujo de datos.png>)
 
 ## 🚀 Funcionalidades
 Funcionalidades implementadas
