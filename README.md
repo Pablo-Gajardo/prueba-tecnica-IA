@@ -1,5 +1,5 @@
 # Copiloto Conversacional sobre Documentos
-# ⚙️ Instrucciones para levantar Docker Compose
+## ⚙️ Instrucciones para levantar Docker Compose
 
 ## Requisitos en sistema
 
