@@ -11,7 +11,7 @@ import { ConfigService } from '@nestjs/config';
 export class PdfLoaderService {
   private readonly logger = new Logger(PdfLoaderService.name);
   private readonly collectionName = 'pdf_collection';
-  private readonly chromaUrl = 'http://localhost:8000'; // Chroma en Docker
+  private readonly chromaUrl = 'http://chroma:8000'; // Chroma en Docker
 
   constructor(private readonly configService: ConfigService) {}
 

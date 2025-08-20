@@ -88,15 +88,17 @@
                 </div>
 
                 <!-- Fuentes alineadas a la izquierda, más pequeñas, sin saltos de línea vacíos -->
-                <div 
-                  v-if="msg.mostrarFuentes" 
-                  class="bg-gray-800 p-2 rounded mt-1 overflow-auto break-words border border-gray-700 text-left"
-                >
-                  <div v-for="(f, i) in msg.fuentes" :key="i" class="mb-2">
-                    <strong class="text-gray-200 text-sm">{{ f.documento }} (pág. {{ f.pagina }})</strong>
-                    <p class="text-xs text-gray-300 break-words text-left">
-                      {{ f.contenido.replace(/^\s*[\r\n]+/gm, '').trim() }}
-                    </p>
+                <div v-if="msg.mostrarFuentes" class="bg-gray-800 p-2 rounded mt-1 overflow-auto break-words border border-gray-700 text-left">
+                  <div v-if="msg.fuentes && msg.fuentes.length > 0">
+                    <div v-for="(f, i) in msg.fuentes" :key="i" class="mb-2">
+                      <strong class="text-gray-200 text-sm">{{ f.documento }} (pág. {{ f.pagina }})</strong>
+                      <p class="text-xs text-gray-300 break-words text-left">
+                        {{ f.contenido.replace(/^\s*[\r\n]+/gm, '').trim() }}
+                      </p>
+                    </div>
+                  </div>
+                  <div v-else class="text-gray-400 text-sm italic">
+                    No se encontraron fuentes.
                   </div>
                 </div>
               </div>

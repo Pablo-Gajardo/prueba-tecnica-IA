@@ -10,7 +10,7 @@ import { ChatPromptTemplate, MessagesPlaceholder } from '@langchain/core/prompts
 export class CopilotoPdfService {
   private readonly logger = new Logger(CopilotoPdfService.name);
   private readonly collectionName = 'pdf_collection';
-  private readonly chromaUrl = 'http://localhost:8000'; // URL de tu Chroma en Docker
+  private readonly chromaUrl = 'http://chroma:8000'; // URL de tu Chroma en Docker
 
   llm: ChatOpenAI;
   memory: ConversationTokenBufferMemory;
@@ -43,7 +43,7 @@ export class CopilotoPdfService {
           4. Resume la información de manera clara y concisa, evitando contenido irrelevante.  
           5. Si no tienes suficiente información para responder, di explícitamente que no puedes responder con certeza.  
           6. Mantén un tono profesional, amigable y fácil de entender. 
-          7. Se muy consiso y usaras menos de 100 malabras en las respuestas`,
+          7. Se muy consiso y usaras menos de 100 malabras en las respuestas depnediendo de tu discrecion`,
           
       ],
       new MessagesPlaceholder('chat_history'),

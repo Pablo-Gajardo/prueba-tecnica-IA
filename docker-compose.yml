@@ -1,0 +1,40 @@
+services:
+  frontend:
+    build:
+      context: ./front-copiloto-pdf
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./front-copiloto-pdf:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - backend
+    command: ["npm", "run", "dev", "--", "--host"]
+
+  backend:
+    build: ./microservicio-copiloto-pdf
+    container_name: backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./microservicio-copiloto-pdf/.env
+    environment:
+      CHROMA_HOST: chroma
+      CHROMA_PORT: 8000
+      CHROMA_SERVER_CORS_ALLOW_ORIGINS: "*"
+    depends_on:
+      - chroma
+
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: chroma
+    ports:
+      - "8000:8000"
+    environment:
+      CHROMA_SERVER_CORS_ALLOW_ORIGINS: "*"
+
+
+volumes:
+  chroma_data:

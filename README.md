@@ -1,4 +1,10 @@
 ## Copiloto Conversacional sobre Documentos
+
+
+
+
+
+
 ### 📝 Descripción del proyecto
 
 Este proyecto implementa un copiloto conversacional que permite a un usuario subir hasta 5 archivos PDF y hacer 
